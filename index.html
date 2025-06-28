@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOL ChatBot</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>LOL ChatBot</h1>
+        <button id="toggle-theme" title="Toggle dark/light mode">🌓</button>
+      </header>
+      <main>
+        <div id="chat-window"></div>
+        <form id="chat-form">
+          <input
+            type="text"
+            id="chat-input"
+            autocomplete="off"
+            placeholder="Type your message..."
+            required
+          />
+          <button type="submit">Send</button>
+        </form>
+      </main>
+      <section id="editor-section">
+        <details>
+          <summary>Edit Chatbot Data (JSON)</summary>
+          <textarea id="json-editor" rows="12"></textarea>
+          <button id="save-json">Save</button>
+          <span id="editor-msg"></span>
+        </details>
+      </section>
+    </div>
+    <script src="chatbot.js"></script>
+  </body>
+</html>
