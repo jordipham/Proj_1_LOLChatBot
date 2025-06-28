@@ -9,10 +9,13 @@
   </head>
   <body>
     <div class="container">
+
       <header>
         <h1>LOL ChatBot</h1>
         <button id="toggle-theme" title="Toggle dark/light mode">🌓</button>
       </header>
+
+      <!-- main text section for input -->
       <main>
         <div id="chat-window"></div>
         <form id="chat-form">
@@ -26,14 +29,17 @@
           <button type="submit">Send</button>
         </form>
       </main>
-      <section id="editor-section">
+
+      <!-- live json editting to phtysical data -->
+      <!-- <section id="editor-section">
         <details>
           <summary>Edit Chatbot Data (JSON)</summary>
           <textarea id="json-editor" rows="12"></textarea>
           <button id="save-json">Save</button>
           <span id="editor-msg"></span>
         </details>
-      </section>
+      </section> -->
+
     </div>
     <script src="chatbot.js"></script>
   </body>

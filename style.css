@@ -19,10 +19,12 @@
   --body-bg: var(--body-bg-dark);
   --text: var(--text-dark);
 }
+
 html,
 body {
   height: 100%;
 }
+
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
@@ -31,6 +33,7 @@ body {
   transition: var(--transition);
   min-height: 100vh;
 }
+
 .container {
   max-width: 520px;
   margin: auto;
@@ -38,19 +41,24 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  height: 100vh;
+  box-sizing: border-box;
 }
+
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1.6rem;
 }
+
 header h1 {
   color: var(--primary-red);
   margin: 0;
   font-size: 2rem;
   letter-spacing: 1px;
 }
+
 #toggle-theme {
   background: var(--light-blue);
   color: var(--white);
@@ -62,11 +70,14 @@ header h1 {
   cursor: pointer;
   transition: background 0.2s;
 }
+
 main {
-  flex: 1;
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
+  min-height: 0;
 }
+
 #chat-window {
   flex: 1;
   background: rgba(80, 141, 223, 0.05);
@@ -77,12 +88,14 @@ main {
   box-shadow: 0 0 0.5rem #0001;
   min-height: 350px;
 }
+
 .message {
   margin-bottom: 0.7rem;
   max-width: 80%;
   word-break: break-word;
   line-height: 1.5;
 }
+
 .message.user {
   align-self: flex-end;
   background: var(--user-bg);
@@ -91,6 +104,7 @@ main {
   padding: 0.7rem 1.1rem;
   box-shadow: 0 1px 6px #e6410733;
 }
+
 .message.bot {
   align-self: flex-start;
   background: var(--bot-bg);
@@ -99,10 +113,12 @@ main {
   padding: 0.7rem 1.1rem;
   box-shadow: 0 1px 6px #16457a33;
 }
+
 #chat-form {
   display: flex;
   gap: 0.5rem;
 }
+
 #chat-input {
   flex: 1;
   padding: 0.6rem 1rem;
@@ -113,10 +129,12 @@ main {
   color: var(--text);
   transition: border 0.2s;
 }
+
 #chat-input:focus {
   border: 2px solid var(--primary-red);
   outline: none;
 }
+
 #chat-form button {
   background: var(--primary-red);
   color: var(--white);
@@ -128,19 +146,23 @@ main {
   cursor: pointer;
   transition: background 0.2s;
 }
+
 #chat-form button:hover {
   background: var(--light-blue);
 }
+
 #editor-section {
   margin-top: 1.2rem;
   font-size: 0.95rem;
 }
+
 #editor-section details {
   border: 1.5px solid var(--light-blue);
   border-radius: 8px;
   background: rgba(80, 141, 223, 0.07);
   padding: 0.5rem 0.7rem;
 }
+
 #json-editor {
   width: 100%;
   margin-top: 0.7rem;
@@ -155,6 +177,7 @@ main {
   resize: vertical;
   box-sizing: border-box;
 }
+
 #save-json {
   margin-top: 0.6rem;
   background: var(--dark-blue);
@@ -165,17 +188,21 @@ main {
   cursor: pointer;
   font-weight: bold;
 }
+
 #editor-msg {
   margin-left: 1rem;
   font-size: 0.94em;
   color: var(--primary-red);
 }
+
 @media (max-width: 600px) {
   .container {
     padding: 0.6rem 0.2rem;
+    height: 100vh;
   }
   #chat-window {
-    min-height: 200px;
+    min-height: 100px;
+    max-height: 35vh; /* Limit chat area to 35% of viewport height */
     padding: 0.5rem;
   }
   header h1 {
