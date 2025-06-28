@@ -195,6 +195,30 @@ main {
   color: var(--primary-red);
 }
 
+#chat-input, #json-editor {
+  background: var(--white);
+  color: var(--text);
+  border-radius: 1.2rem;
+  border: 2px solid var(--light-blue);
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+[data-theme="dark"] #chat-input,
+[data-theme="dark"] #json-editor {
+  background: #232b37;
+  color: #eaf3ff;
+  border-color: #508ddf;
+}
+
+[data-theme="light"] #chat-input,
+[data-theme="light"] #json-editor {
+  background: #fff;
+  color: #232b37;
+  border-color: #508ddf;
+}
+
 @media (max-width: 600px) {
   .container {
     padding: 0.6rem 0.2rem;
