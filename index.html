@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LOL ChatBot</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- D3 for header effects -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Natural for NLP -->
+    <script src="https://unpkg.com/natural@6.5.0/lib/natural.js"></script>
   </head>
   <body>
     <div class="container">
-
       <header>
-        <h1>LOL ChatBot</h1>
+        <h1>LOL ChatBot <span id="d3-header"></span></h1>
         <button id="toggle-theme" title="Toggle dark/light mode">🌓</button>
       </header>
-
-      <!-- main text section for input -->
       <main>
         <div id="chat-window"></div>
         <form id="chat-form">
@@ -29,8 +29,6 @@
           <button type="submit">Send</button>
         </form>
       </main>
-
-      <!-- live json editting to phtysical data -->
       <!-- <section id="editor-section">
         <details>
           <summary>Edit Chatbot Data (JSON)</summary>
@@ -39,7 +37,6 @@
           <span id="editor-msg"></span>
         </details>
       </section> -->
-
     </div>
     <script src="chatbot.js"></script>
   </body>
